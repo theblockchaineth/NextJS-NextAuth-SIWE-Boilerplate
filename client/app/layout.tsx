@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { Permanent_Marker } from "next/font/google";
 import "./globals.css";
+
 import SiteProviders from "./providers/SiteProviders";
+import Navbar from "./_components/Navbar";
+import { Permanent_Marker } from "next/font/google";
 
 const permanentMarker = Permanent_Marker({ subsets: ["latin"], weight: "400" });
 
@@ -17,8 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="dark">
-      <body className={permanentMarker.className}>
-        <SiteProviders>{children}</SiteProviders>
+      <body className={`${permanentMarker.className} min-h-screen bg-base-300`}>
+        <SiteProviders>
+          <Navbar />
+          {children}
+        </SiteProviders>
       </body>
     </html>
   );

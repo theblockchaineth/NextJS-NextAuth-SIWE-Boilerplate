@@ -1,12 +1,11 @@
-import ConnectButton from "./_components/ConnectButton";
+import HomeHero from "./_components/HomeHero";
+import BoilerplateFeatures from "./_components/BoilerplateFeatures";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <div>
-        <p>hello world</p>
-        <ConnectButton />
-      </div>
+    <main className="">
+      <HomeHero />
+      <BoilerplateFeatures />
     </main>
   );
 }

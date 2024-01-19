@@ -8,7 +8,6 @@ import { siweConfig } from "./SiweClient";
 const metadata = {
   name: "My Application",
   description: "My Application",
-  url: process.env.NEXTAUTH_URL,
 };
 
 const projectId = String(process.env.NEXT_PUBLIC_WCID);
